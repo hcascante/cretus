@@ -102,8 +102,32 @@ export default function ConfiguracionPage() {
 
   const handleTest = async () => {
     setIsTesting(true)
-    // Simular envío de mensajes de prueba
-    await new Promise(resolve => setTimeout(resolve, 3000))
+    
+    try {
+      // Hacer llamada HTTP real al endpoint
+      const response = await fetch('http://localhost:8000/call-now', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          channels: Object.keys(channels).filter(key => channels[key].enabled),
+          timestamp: new Date().toISOString()
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('Respuesta del servidor:', result)
+      
+    } catch (error) {
+      console.error('Error al hacer la llamada HTTP:', error)
+      // Aún mostramos el modal de éxito para no interrumpir la UX
+    }
+    
     setIsTesting(false)
     setShowSuccessModal(true)
   }

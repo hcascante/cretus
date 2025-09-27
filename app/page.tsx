@@ -16,7 +16,6 @@ import {
   Sparkles,
   Headphones,
   Settings,
-  Zap,
 } from "lucide-react"
 
 export default function CretusLanding() {
@@ -329,12 +328,7 @@ export default function CretusLanding() {
 
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Producto Actual */}
-            <Card className="p-8 text-center border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 relative overflow-hidden">
-              <div className="absolute top-4 right-4">
-                <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                  DISPONIBLE
-                </div>
-              </div>
+            <Card className="p-8 text-center border-2 border-primary/20 bg-white dark:bg-slate-900 relative overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Bot className="w-8 h-8 text-primary" />
               </div>
@@ -363,7 +357,7 @@ export default function CretusLanding() {
             </Card>
 
             {/* Producto Futuro 1 */}
-            <Card className="p-8 text-center border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-accent/10 relative overflow-hidden opacity-75 hover:opacity-90 transition-opacity duration-300 grayscale-[0.1] hover:grayscale-0">
+            <Card className="p-8 text-center border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-accent/10 relative overflow-hidden opacity-75 hover:opacity-90 transition-all duration-300 grayscale-[0.1] hover:grayscale-0 hover:shadow-xl hover:scale-105">
               <div className="absolute top-4 right-4">
                 <div className="bg-accent text-white px-3 py-1 rounded-full text-xs font-bold">
                   PRÓXIMAMENTE
@@ -373,8 +367,6 @@ export default function CretusLanding() {
                 <Headphones className="w-8 h-8 text-accent" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Cretus CX Agent</h3>
-              <h3></h3>
-              <p></p>
               <p className="text-muted-foreground mb-6">
                 Asistente de IA especializado en atención al cliente que responde consultas de usuarios finales sobre sus líneas y tarjetas de crédito.
               </p>
@@ -399,7 +391,7 @@ export default function CretusLanding() {
             </Card>
 
             {/* Producto Futuro 2 */}
-            <Card className="p-8 text-center border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-accent/10 relative overflow-hidden opacity-75 hover:opacity-90 transition-opacity duration-300 grayscale-[0.1] hover:grayscale-0">
+            <Card className="p-8 text-center border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-accent/10 relative overflow-hidden opacity-75 hover:opacity-90 transition-all duration-300 grayscale-[0.1] hover:grayscale-0 hover:shadow-xl hover:scale-105">
               <div className="absolute top-4 right-4">
                 <div className="bg-accent text-white px-3 py-1 rounded-full text-xs font-bold">
                   PRÓXIMAMENTE
@@ -433,26 +425,6 @@ export default function CretusLanding() {
             </Card>
           </div>
 
-          {/* Call to Action para Coming Soon */}
-          <div className="text-center mt-16">
-            <div className="inline-flex flex-col items-center gap-4">
-              <div className="text-center mb-2">
-                <h3 className="text-xl font-semibold text-foreground mb-2">¿Querés ser el primero en conocer las novedades?</h3>
-                <p className="text-muted-foreground">Suscribite para recibir actualizaciones sobre nuestros nuevos productos</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="Tu email"
-                  className="px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent sm:w-64"
-                />
-                <Button className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-6 py-3 font-semibold">
-                  <Zap className="w-4 h-4 mr-2" />
-                  Suscribirse
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
